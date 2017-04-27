@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example </title>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+  
+  <p>{{$eval(expression)}}</p>
+  <w3-test-directive></w3-test-directive>
+</body>
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        template : " <input ng-model='expression'/ >"
+    };
+});
+</script>
+
+</html>
